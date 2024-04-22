@@ -1,0 +1,143 @@
+@font-face {
+  font-family: quiz;
+  src: url("./Assets/fonts/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: quiz-light;
+  src: url("./Assets/fonts/Poppins-Light.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container-quiz-app {
+  font-family: quiz;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container-quiz-app h2 {
+  font-size: 36px; 
+  padding-bottom: 10px;
+}
+.app {
+  background-color: #fff8de6b;
+  width: 600px;
+  min-height: 300px;
+  height: min-content;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.score-section {
+  display: flex;
+  font-size: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* QUESTION/TIMER/LEFT SECTION */
+.question-section {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question-count {
+}
+
+.question-count span {
+  font-size: 28px;
+}
+
+.question-text {
+}
+
+.timer-text {
+  background: rgb(230, 153, 12);
+  padding: 15px;
+  margin-top: 20px;
+  margin-right: 20px;
+  border: 5px solid rgb(255, 189, 67);
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* ANSWERS/RIGHT SECTION */
+.answer-section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+}
+
+.btn-question {
+  font-family: quiz-light;
+
+  padding: 12px !;
+  opacity: 0.9;
+  margin: 10px;
+  background: #485be6;
+  height: 40px;
+  width: 250px;
+  font-size: 16px;
+  color: #ffffff;
+  border-radius: 15px;
+  display: flex;
+  padding: 12px;
+  border: none;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+
+.correct {
+  background-color: #2f922f !important;
+}
+
+.incorrect {
+  background-color: #ff3333 !important;
+}
+.disabled {
+  background-color: rgba(100, 98, 98, 0.865);
+}
+.btn-question:hover {
+  opacity: 1;
+}
+
+.btn-question:focus {
+  outline: none;
+}
+
+.btn-question svg {
+  margin-right: 5px;
+}
+
+.next-btn {
+  font-family: quiz-light;
+  padding: 12px !;
+  opacity: 0.9;
+  margin: 10px;
+  background: #3145d6;
+  height: 40px;
+  font-size: 16px;
+  color: #ffffff;
+  border-radius: 15px;
+  display: flex;
+  padding: 12px;
+  border: none;
+  justify-content: flex-start;
+  align-items: center;
+  visibility: hidden;
+  cursor: pointer;
+}
